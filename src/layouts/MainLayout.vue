@@ -41,7 +41,9 @@
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <keep-alive>
+        <router-view />
+      </keep-alive>
     </q-page-container>
   </q-layout>
 </template>
@@ -54,6 +56,12 @@ const linksData = [
   {
     title: 'Settings',
     caption: 'General settings',
+    icon: 'settings',
+    link: '/settings',
+  },
+  {
+    title: 'Calendar',
+    caption: 'Choose Date & Find Holidays',
     icon: 'settings',
     link: '/',
   },
